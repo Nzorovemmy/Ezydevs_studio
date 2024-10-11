@@ -64,7 +64,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #00BFFF;
+   background-color: #00BFFF;
     color: #fff;
     padding: 100px 20px;
     text-align: center;
@@ -103,6 +103,35 @@ body {
             margin-bottom: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px #000000, 40% opacity;
+            animation: 400ms ease-in both;
+            animation-timeline: view();
+            animation-range: entry;
+            animation-name: fade; 
+            animation-delay: 2s;
+            
+        }
+        
+        @keyframes fade{
+          0%{
+            transform: scale3d(2.5);
+            opacity: 0;
+            filter: blur(10px);
+            transition: all 400ms ease-in;
+            
+          }
+          100%{
+            transform: scale3d(1);
+            opacity: 1;
+            filter: blur(0px);
+           
+            transition: all 400ms ease-in;
+
+          }
+        }
+        
+        
+        .card:hover  {
+          transform: scale(20px)
         }
     
 .features {
@@ -154,3 +183,40 @@ footer {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toolbox {
+  width: 20%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  float: left;
+}
+
+.draggable {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #555;
+  border-radius: 5px;
+  cursor: grab;
+}
+
+.canvas {
+  width: 75%;
+  height: 400px;
+  background-color: #1e1e1e;
+  margin-left: 22%;
+  border: 2px dashed #444;
+  padding: 10px;
+}
